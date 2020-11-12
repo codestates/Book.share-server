@@ -11,12 +11,17 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      User.hasMany(models.post_lists, {
+        as: 'post_lists',
+        foreignKey: 'userId',
+        sourceKey: 'id',
+      });
     }
   };
   users.init({
     email: DataTypes.STRING,
-    picture: DataTypes.STRING,
     password: DataTypes.STRING,
+    picture: DataTypes.STRING,
     username: DataTypes.STRING
   }, {
     sequelize,
