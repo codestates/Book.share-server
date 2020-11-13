@@ -1,5 +1,5 @@
 module.exports ={
-    post_id:require('./post_id'),
+    post_title:require('./post_title'),
     postlist:require('./postlist'),
     postpush:require('./postpush')
 };
