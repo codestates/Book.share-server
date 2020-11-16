@@ -1,10 +1,8 @@
-const {users} = require('../../models');
+const { users } = require('../../models');
 
 module.exports = {
     post: (req,res) =>{
         const { email, password, username } = req.body;
-        console.log(1234);
-        console.log(req);
 
         users
         .findOrCreate({
