@@ -16,10 +16,6 @@ app.use(
         saveUninitialized: true
     })
 );
-
-app.use('/user', usersRouter)
-app.use('/post', postsRouter)
-
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -30,6 +26,8 @@ app.use(
         credentials: true
     })
 );
+app.use('/user', usersRouter)
+app.use('/post', postsRouter)
 
 app.get('/', (req, res) => {
     res.send('Hello world');
