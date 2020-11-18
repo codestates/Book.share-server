@@ -1,12 +1,17 @@
 const { users } = require('../../models/');
+const jwt = require('jsonwebtoken');
+const dotenv = require('dotenv');
+dotenv.config();
+const YOUR_SECRET_KEY = process.env.SECRET_KEY;
 
 module.exports = {
     get: (req, res) => {
-
+        let decoded = jwt.verify(req.cookies.userid,YOUR_SECRET_KEY);
+        console.log(decoded);
         users
             .findOne({
                 where: {
-                    id: req.session.userid
+                    id: decoded.id
                 }
             }).then(result => {
                 if (result) {
