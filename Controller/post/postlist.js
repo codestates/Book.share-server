@@ -5,6 +5,7 @@ module.exports = {
     get:(req,res) =>{
         post_lists.findAll({
             limit:7,
+            order: [['id', 'DESC']],
             include: [
                 {
                     model: users,

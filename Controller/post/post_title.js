@@ -2,10 +2,10 @@ const {post_lists} = require('../../models');
 
 module.exports = {
     get:(req,res) =>{
-        console.log(req.body);
+        console.log(req.params);
         post_lists.findAll({
             where:{
-                title: req.body.title
+                title: req.params.title // params로 수정
             }
         })
         .then(result=>{
