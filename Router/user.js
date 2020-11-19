@@ -6,6 +6,8 @@ const user = require('../Controller/user');
 
 
 // *POST /user/login
+router.get('/github',userController.github.get);
+//router.get('/google',);
 
 router.post('/login', userController.login.post);
 
