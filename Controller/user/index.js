@@ -3,5 +3,6 @@ module.exports={
     logout:require('./logout'),
     signup:require('./signup'),
     userinfo:require('./userinfo'),
+    github:require('./github'),
     emailCheck:require('./emailCheck')
 };
