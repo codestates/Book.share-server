@@ -4,5 +4,6 @@ module.exports={
     signup:require('./signup'),
     userinfo:require('./userinfo'),
     github:require('./github'),
+    changeInfo:require('./changeInfo'),
     emailCheck:require('./emailCheck')
 };

@@ -20,7 +20,7 @@ router.post('/signup', userController.signup.post);
 router.get('/info', userController.userinfo.get);
 
 // *GET /user/modifyInfo
-router.get('/modifyInfo', userController.userinfo.get);
+router.post('/changeInfo', userController.changeInfo.post);
 
 // *GET /user/emailCheck
 router.get('/emailCheck/:email',userController.emailCheck.get);
